@@ -1186,70 +1186,369 @@ body {
 }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 600px) {
-  .sorry-title {
-    font-size: 2.2rem;
-  }
 
-  .envelope {
-    font-size: 6rem;
-  }
-
-  .reasons-title,
-  .memories-title,
-  .meaning-title,
-  .song-title {
-    font-size: 2rem;
-  }
-
-  .letter-container {
+/* --- Tablet & small laptops --- */
+@media (max-width: 768px) {
+  .page {
     padding: 1.5rem;
-    margin: 0 0.5rem;
+    overflow-y: auto;
+    justify-content: flex-start;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
   }
 
-  .final-question {
-    font-size: 2rem;
+  .page-entrance {
+    justify-content: center;
+    padding-top: 1.5rem;
   }
 
-  .final-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .promise-items {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .memories-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .nav-btn {
-    padding: 0.6rem 1.2rem;
-    font-size: 0.85rem;
-    bottom: 4rem;
-  }
-
-  .page-indicators {
-    bottom: 4.5rem;
-  }
-
-  .celebration-title {
-    font-size: 2.2rem;
+  .sorry-title {
+    font-size: 2.4rem;
   }
 
   .promise-title {
     font-size: 2.2rem;
   }
 
-  .typewriter-line {
+  .letter-container {
+    padding: 2rem;
+    max-width: 95%;
+  }
+
+  .memories-grid {
+    max-width: 95%;
+  }
+
+  .reasons-list {
+    max-width: 95%;
+  }
+
+  .typewriter-container {
+    max-width: 95%;
+  }
+}
+
+/* --- Mobile phones --- */
+@media (max-width: 600px) {
+  .page {
+    padding: 1.2rem;
+    padding-top: 2.5rem;
+    padding-bottom: 6rem;
+    overflow-y: auto;
+    justify-content: flex-start;
+  }
+
+  .page-entrance {
+    justify-content: center;
+    padding-top: 1.2rem;
+  }
+
+  /* Envelope */
+  .envelope {
+    font-size: 5rem;
+  }
+
+  .entrance-text {
+    font-size: 1.3rem;
+  }
+
+  /* Sorry page */
+  .sorry-heart {
+    font-size: 4rem;
+  }
+
+  .sorry-title {
+    font-size: 2rem;
+  }
+
+  .sorry-text {
     font-size: 1rem;
+    max-width: 100%;
+    line-height: 1.7;
+  }
+
+  /* Reasons */
+  .reasons-title,
+  .memories-title,
+  .meaning-title,
+  .song-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .reasons-list {
+    max-width: 100%;
+  }
+
+  .reasons-list li {
+    font-size: 0.95rem;
+    padding: 0.7rem 1rem;
+    margin-bottom: 0.6rem;
+  }
+
+  /* Meaning / Typewriter */
+  .typewriter-container {
+    max-width: 100%;
+    min-height: auto;
+  }
+
+  .typewriter-line {
+    font-size: 0.95rem;
     white-space: normal;
+    border-right: none;
+    width: auto;
+    animation: none;
+  }
+
+  .typewriter-line.visible {
+    opacity: 1;
+    width: auto;
+  }
+
+  .meaning-emoji-row {
+    font-size: 1.5rem;
+    gap: 0.7rem;
+  }
+
+  /* Promise */
+  .promise-icon {
+    font-size: 3.5rem;
+  }
+
+  .promise-title {
+    font-size: 2rem;
+  }
+
+  .promise-text {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .promise-items {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 0.8rem;
+  }
+
+  .promise-item {
+    font-size: 0.95rem;
+    padding: 0.8rem 1.2rem;
+  }
+
+  /* Letter */
+  .letter-container {
+    padding: 1.5rem;
+    max-width: 100%;
+    margin: 0;
+    border-radius: 18px;
+  }
+
+  .letter-greeting {
+    font-size: 1.6rem;
+  }
+
+  .letter-body {
+    font-size: 0.9rem;
+    line-height: 1.8;
+  }
+
+  .letter-signature {
+    font-size: 1.4rem;
+  }
+
+  /* Memories */
+  .memories-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+    max-width: 100%;
+  }
+
+  .memory-card {
+    padding: 1rem 0.7rem;
+    border-radius: 12px;
+  }
+
+  .memory-emoji {
+    font-size: 2rem;
+  }
+
+  .memory-text {
+    font-size: 0.8rem;
+  }
+
+  /* Song */
+  .song-icon {
+    font-size: 3.5rem;
   }
 
   .song-quote {
+    font-size: 1rem;
+    padding: 0 0.5rem;
+    max-width: 100%;
+  }
+
+  .song-quote::before,
+  .song-quote::after {
+    font-size: 2.5rem;
+  }
+
+  /* Final */
+  .final-hearts {
+    font-size: 3rem;
+  }
+
+  .final-question {
+    font-size: 1.8rem;
+  }
+
+  .final-subtext {
+    font-size: 0.95rem;
+  }
+
+  .final-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .btn-yes {
+    padding: 0.9rem 2.5rem;
+    font-size: 1.05rem;
+  }
+
+  .btn-no {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.85rem;
+  }
+
+  /* Celebration */
+  .celebration-emoji {
+    font-size: 3.5rem;
+  }
+
+  .celebration-title {
+    font-size: 2rem;
+  }
+
+  .celebration-text {
+    font-size: 1.3rem;
+  }
+
+  .celebration-hearts {
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+  }
+
+  .celebration-message {
+    font-size: 0.9rem;
+    max-width: 100%;
+  }
+
+  /* Navigation */
+  .nav-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.8rem;
+    bottom: 1.2rem;
+  }
+
+  .nav-prev {
+    left: 1rem;
+  }
+
+  .nav-next {
+    right: 1rem;
+  }
+
+  .page-indicators {
+    bottom: 1.2rem;
+  }
+
+  .indicator {
+    width: 6px;
+    height: 6px;
+  }
+
+  .indicator.active {
+    width: 18px;
+  }
+
+  /* Music toggle */
+  .music-toggle {
+    width: 40px;
+    height: 40px;
     font-size: 1.1rem;
-    padding: 0 1rem;
+    top: 1rem;
+    right: 1rem;
+  }
+}
+
+/* --- Very small phones (iPhone SE, etc) --- */
+@media (max-width: 380px) {
+  .page {
+    padding: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 5.5rem;
+  }
+
+  .envelope {
+    font-size: 4rem;
+  }
+
+  .entrance-text {
+    font-size: 1.1rem;
+  }
+
+  .sorry-title {
+    font-size: 1.7rem;
+  }
+
+  .sorry-heart {
+    font-size: 3.5rem;
+  }
+
+  .sorry-text {
+    font-size: 0.9rem;
+  }
+
+  .reasons-title,
+  .memories-title,
+  .meaning-title,
+  .song-title {
+    font-size: 1.5rem;
+  }
+
+  .reasons-list li {
+    font-size: 0.85rem;
+    padding: 0.6rem 0.8rem;
+  }
+
+  .promise-title {
+    font-size: 1.7rem;
+  }
+
+  .final-question {
+    font-size: 1.5rem;
+  }
+
+  .celebration-title {
+    font-size: 1.7rem;
+  }
+
+  .memories-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .letter-container {
+    padding: 1.2rem;
+  }
+
+  .letter-greeting {
+    font-size: 1.3rem;
+  }
+
+  .letter-body {
+    font-size: 0.85rem;
+    line-height: 1.7;
   }
 }
